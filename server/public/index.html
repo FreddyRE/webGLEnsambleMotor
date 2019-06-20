@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ensamble motor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		
+	</head>
+	<body>
+
+		<div class="ui massive icon input" id="user-input">
+  			<input type="text" placeholder="Name or nickname...">
+  			<i class="angle right icon" onclick="sendName()" id="iconSend"></i>
+		</div>
+
+		<div class="ui massive icon input" id="pass-input">
+			<input type="password" placeholder="password">
+			<i class="paper plane icon" id="iconSend2"></i>
+	  </div>
+	  <div class="ui label" id="label-guest">Ingresa 0 si deseas entrar como modo "guest"</div>
+
+	 
+
+
+		<div class="ui segment" id="waiting-all-users">
+			<div class="ui active inverted dimmer">
+			  <div class="ui large text loader">Esperando usuarios</div>
+			</div>
+		</div>
+
+        <script src="js/threeJS/three.min.js"></script>
+		<script src="js/interface.js"></script>
+		<script src="js/cambiosDAE.js"></script>
+        <script src="js/threeJS/interaction.min.js"></script>
+		<script src="js/threeJS/DragControls.js"></script>
+		<script src="js/threeJS/TrackballControls.js"></script>
+        <script src="js/threeJS/ColladaLoader.js"></script>
+        <script src="js/main.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+         <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     		https://firebase.google.com/docs/web/setup#config-web-app -->
+
+		<script src="js/sessionController.js"></script>
+	</body>
+</html>

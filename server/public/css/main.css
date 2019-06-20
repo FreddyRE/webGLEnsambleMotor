@@ -1,0 +1,56 @@
+body {
+	background-color: #f0f0f0;
+	color: #444;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+a {
+	color: #08f;
+}
+
+#iconSend{
+	pointer-events: all;
+
+}
+
+#iconSend2{
+	pointer-events: all;
+
+}
+
+#iconSend:hover{
+	cursor: pointer;
+}
+
+#iconSend2:hover{
+	cursor: pointer;
+}
+
+#user-input {
+	display: none;
+}
+
+#pass-input {
+	display: none;
+}
+
+#waiting-all-users {
+	display: none;
+}
+
+.ui.inverted.dimmer {
+	background-color: #f0f0f0;
+}
+
+.ui.segment, .ui.segments .segment {
+	border-color: #f0f0f0
+}
+
+#label-guest {
+	position: absolute;
+	display: none;
+	top:55%;
+	background-color: #f0f0f0;
+}
