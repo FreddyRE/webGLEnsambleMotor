@@ -170,7 +170,6 @@ function assignNameToSlot(name, key, pass) {
 
 
 function goToPlayground() {
-    
     init()
     animate()
 }
