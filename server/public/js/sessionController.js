@@ -125,6 +125,8 @@ function goToWaitingAllPlayers(user,pass,ref) {
 function insertInRealTimeDBUser(user, pass, ref) {
 
     let slot = ref.split("/")[1]
+
+    selectedSlot = slot
     let obj = {}
     let objTemp = {}
 
@@ -170,6 +172,7 @@ function assignNameToSlot(name, key, pass) {
 
 
 function goToPlayground() {
+
     init()
     animate()
 }

@@ -11,10 +11,6 @@ const services = require("./public/servicios.js")
 server.listen(8080, function() {
 
 
-
-
-
-
 	filesLoader.servingFiles(app, path)
 
 

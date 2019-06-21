@@ -6,7 +6,7 @@ var newInterface = {
 		DAEName: "escape",
 		color : "rgb(120,0,20)",
 		position: [-0.172665, 0, -0.675026],
-		user: "slot1"
+		user: "slot3"
 	}, 
 
 	"part2" : {
@@ -22,9 +22,9 @@ var newInterface = {
 		urlPathDAE : "object1.children[2]",
 		urlPathHolder: "object2.children[2]",
 		DAEName: "elise",
-		color: "rgb(0,30,120)",
+		color: "rgb(255,255,0)",
 		position:[0, 10, 0],
-		user: "slot3"
+		user: "slot1"
 	},
 
 	"part4" : {
@@ -33,7 +33,7 @@ var newInterface = {
 		DAEName: "cabeza_motor",
 		color: "rgb(40,129,90)",
 		position: [0, -6, 0],
-		user : "slot4"
+		user : "slot5"
 	},
 
 	"part5" : {
@@ -42,7 +42,7 @@ var newInterface = {
 		DAEName: "parte_trasera",
 		color: "rgb(40,129,90)",
 		position: [0, 11, 7],
-		user : "slot5"
+		user : "slot4"
 	}, 
 
 	"part6" : {

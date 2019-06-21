@@ -5,33 +5,8 @@ var object1, object2
 var interaction
 var activeUsers = []
 
-function setUsersOnline() {
-
-    docRef.get().then((doc)=> {
-        if(doc && doc.exists) {
-            let slots = Object.keys(doc.data())
-            
-            for(let i=0; i<slots.length; i++){
-
-                let obj = {}
-
-                obj[slots[i]]["name"] = doc.data()[slots[i]]["name"]
-                activeUsers.push(obj )
-                
-            }
-        }
-    }).catch((err)=>{
-        console.log(err)
-    })
-
-
-}
-
 
 function init() {
-
-
-    setUsersOnline()
 
     container = document.createElement( 'div' );
 	document.body.appendChild( container );
@@ -111,113 +86,8 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 	renderer.setSize( window.innerWidth, window.innerHeight );
 }
-            //
+        
             
-function interactionDAE() {
-
-    if(object1 === undefined || object2 === undefined){
-
-        setTimeout(() => {
-            interactionDAE()
-        }, 200);
-    } else {
-
-
-        let keys = Object.keys(newInterface)
-        let slotsWithPartMatch = {}
-    
-        for(let i in keys){
-    
-            let obj = { }
-            slotsWithPartMatch[newInterface[keys[i]]["user"]] = keys[i]
-        }
-    
-        switch (selectedSlot) {
-    
-            case "slot1" :
-               
-                let part =  newInterface[slotsWithPartMatch[selectedSlot]]
-                let urlPath = eval(part["urlPathDAE"])
-                let color = part["color"]
-    
-                urlPath.material.color = new THREE.Color(color)
-                 
-    
-            break
-    
-            case "slot2" :
-                console.log("segundo turno")
-            break
-    
-            case  "slot3" :
-                console.log("tercer turno")
-            break;
-    
-            case "slot4" :
-                console.log("cuarto turno")
-            break
-            case "" :
-    
-                console.log(object1)
-            break
-        }
-
-    }
-
-
-   
-    /*
-
-    var wasclicked = false
-
-    if(object1=== undefined || object2 === undefined) {
-        setTimeout(()=>{
-            interactionDAE()
-        }, 100)
-    } else {
-
-        interaction = new THREE.Interaction(renderer, scene, camera);
-
-
-        for(let i in Object.keys(newInterface)){
-
-            let keys = Object.keys(newInterface)[i]
-            let path = eval(newInterface[keys]["urlPathDAE"])
-            let color = newInterface[keys]["color"]
-            let holder = eval(newInterface[keys]["urlPathHolder"])
-
-            newInterface[keys]["isSelected"] = false
-            
-            path.on("mousedown", () => {
-
-                if(newInterface[keys]["isSelected"] === false) {
-                    newInterface[keys]["isSelected"] = true
-                    path.material.color = new THREE.Color("rgb(255,255,255)")
-                } else {
-                    newInterface[keys]["isSelected"] = false
-                    path.material.color = new THREE.Color(color)
-                }
-                
-            })
-
-            path.on("mouseover", () => {
-                path.material.color = new THREE.Color("rgb(255,255,255)")
-            })
-            path.on("mouseout", () => {
-                if(newInterface[keys]["isSelected"] === false) {
-                    path.material.color = new THREE.Color(color)
-                }
-                
-            })
-
-
-
-        }
-
-    }  
-    */
-}
-
 function animate() {
     requestAnimationFrame( animate );
 	render();
